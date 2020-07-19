@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #bb {
+            /*             display: inline; */
+            /*  */
+            /* DIV以行形式显示 */
+            overflow-y: hidden;
+            /* 超出Y方向的隐藏*/
+            overflow-x: scroll;
+            /* 超出X方向的滚动*/
+            white-space: nowrap;
+            /* ”空格“不换行 */
+            background-color: blue;
+        }
+
+        .jjj {
+            width: 800px;
+            height: 500px;
+            background-color: brown;
+            border: 4px #333333 solid;
+            font-size: 100px;
+            font-style: normal;
+            margin: 0 auto;
+            padding: 10%;
+            text-align: center;
+            /* 居中 */
+            position: relative;
+        }
+
+        #button {
+            text-align: center;
+            cursor: pointer;
+            font-weight: bolder;
+            background-color: #fff;
+            position: fixed;
+            top: 150PX;
+            left: 150PX;
+            height: auto;
+            width: auto;
+            border: 4px solid #777777
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="bb">
+        超越技术 数据结构 前端小课 知识小集 IOS开发 超越技术
+        11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+        超越技术 数据结构 前端小课 知识小集 IOS开发 超越技术
+        数据结构 前端小课 知识小集 IOS开发 超越技术 数据结构 前端小课 知识小集 IOS开发 超越技术 数据结构 前端小课 知识小集 IOS开发
+    </div>
+    <div class="jjj">
+        内容
+    </div>
+    <div id="button" onclick="ccc()">点击滑动</div>
+
+</body>
+<script type="text/javascript">
+    var a = 0;
+    var bb = document.getElementById("bb");
+    var d = document.getElementById("d");
+
+    function ccc() {
+        c = ++a; /* c应该定义为1.2.3.4 */
+        c = c % 5;
+        var b = 600 * (c);
+        bb.scrollTo({
+            left: b,
+            behavior: "smooth"
+        });
+        console.log(b)
+    
+    }
+    console.log(valueOf(undefined));
+    /*递增数  */
+    /*  var j=1;
+       var k=0;
+       while (j<=100){
+           k=j+k;
+           j+=1;
+       }
+       console.log(k) */
+    /* 输出1~100数字 */
+    /* var i=1;
+    while(i<=100){document.write(i +'</br>');
+    i+=1; } */
+</script>
+
+</html>
